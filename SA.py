@@ -4,6 +4,9 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import seaborn as sns
 import cleantext
+from sklearn.feature_extraction.text import CountVectorizer
+import pandas as pd
+import re
 
 st.header('Sentiment Analysis')
 
@@ -66,3 +69,4 @@ with st.expander('Analyze Text'):
         if clean_checkbox:
             text = clean_text(text)
         analyze_sentiment(text)
+
